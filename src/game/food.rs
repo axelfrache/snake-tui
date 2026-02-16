@@ -1,5 +1,5 @@
 use super::{Board, Position, Snake};
-use rand::Rng;
+use rand::random_range;
 
 pub struct Food {
     position: Position,
@@ -7,12 +7,11 @@ pub struct Food {
 
 impl Food {
     pub fn new(board: &Board, snake: &Snake) -> Self {
-        let mut rng = rand::thread_rng();
         let mut position;
         loop {
             position = Position {
-                x: rng.gen_range(1..board.width - 1),
-                y: rng.gen_range(1..board.height - 1),
+                x: random_range(1..board.width - 1),
+                y: random_range(1..board.height - 1),
             };
 
             if !snake.body().contains(&position) {
