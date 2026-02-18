@@ -6,10 +6,18 @@ A classic Snake game in Rust using [Ratatui](https://github.com/ratatui-org/rata
 
 ## Installation
 
+Install directly with cargo:
+
+```bash
+cargo install ratatui-snake
+```
+
+Or build from source:
+
 ```bash
 git clone https://github.com/axelfrache/ratatui-snake
 cd ratatui-snake
-cargo run
+cargo run --release
 ```
 
 ## Controls
